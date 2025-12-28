@@ -1,0 +1,172 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500&display=swap');
+
+/* BODY – romantic gradient background */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 30px;
+    background: radial-gradient(circle at top left, #ffe0ec, #e0e7ff, #fff);
+    color: #2b2b2b;
+    perspective: 1200px;
+}
+
+/* Floating flower effect */
+body::before,
+body::after {
+    content: "🌸";
+    position: fixed;
+    font-size: 60px;
+    opacity: 0.15;
+    animation: float 8s infinite ease-in-out;
+}
+
+body::after {
+    content: "🌹";
+    top: 70%;
+    left: 80%;
+    animation-duration: 10s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-40px) rotate(20deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* MAIN HEADING – 3D text */
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #c2185b;
+    text-shadow: 
+        2px 2px 0 #fff,
+        6px 6px 15px rgba(0,0,0,0.25);
+    transform: translateZ(30px);
+}
+
+/* HR – glowing divider */
+hr {
+    border: none;
+    height: 4px;
+    margin: 35px 0;
+    background: linear-gradient(to right, #ff4081, #7b1fa2);
+    border-radius: 10px;
+}
+
+/* 3D CARD STYLE (pre blocks) */
+pre {
+    background: linear-gradient(145deg, #ffffff, #f1f1f1);
+    padding: 25px;
+    border-radius: 18px;
+    line-height: 1.8;
+    font-size: 15px;
+    box-shadow:
+        12px 12px 25px rgba(0,0,0,0.15),
+        -8px -8px 20px rgba(255,255,255,0.9);
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    white-space: pre-wrap;
+}
+
+pre:hover {
+    transform: translateY(-8px) rotateX(4deg);
+    box-shadow:
+        20px 20px 40px rgba(0,0,0,0.25);
+}
+
+/* Highlight text */
+pre b {
+    color: #ad1457;
+}
+
+/* PROFILE IMAGES – 3D floating */
+img {
+    display: block;
+    margin: 30px auto;
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid #ff80ab;
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.3);
+    transition: transform 0.5s ease;
+}
+
+img:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* SECTION TITLES */
+div h4 {
+    text-align: center;
+    font-size: 24px;
+    color: #6a1b9a;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+    margin-top: 30px;
+}
+
+/* NORMAL DIV TEXT */
+div {
+    text-align: center;
+    color: #555;
+    font-size: 16px;
+}
+
+/* ABOUT MYSELF TITLE */
+b u {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #d81b60;
+    text-decoration-color: #ff80ab;
+}
+
+/* LIST STYLE */
+ul li {
+    color: #512da8;
+    font-weight: 500;
+    margin: 6px 0;
+}
+
+/* ASIDE – 3D GLASS CARD */
+aside {
+    margin-top: 40px;
+    padding: 25px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #fde4f2, #ece6ff);
+    box-shadow:
+        15px 15px 35px rgba(0,0,0,0.2),
+        -10px -10px 25px rgba(255,255,255,0.7);
+    backdrop-filter: blur(8px);
+}
+
+/* ASIDE HEADING */
+aside h4 {
+    color: #880e4f;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* RADIO BUTTONS */
+aside input[type="radio"] {
+    accent-color: #d81b60;
+    margin-right: 8px;
+}
+
+/* COMMENT BOX – glowing input */
+aside input[type="text"] {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    box-shadow:
+        inset 3px 3px 6px rgba(0,0,0,0.2),
+        inset -3px -3px 6px rgba(255,255,255,0.9);
+    outline: none;
+}
+
+aside input[type="text"]:focus {
+    box-shadow:
+        0 0 15px rgba(216, 27, 96, 0.5);
+}
